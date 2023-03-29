@@ -60,6 +60,32 @@
         </ul>
     </section>
 
+    <section id="secao_orcamento">
+        <form action="">
+            <h3>Orçamento</h3>
+            
+            <label for="quantidade">Quantidade de páginas</label>
+            <input type="number" id="quantidade" min="1" value="5">
+
+            <label for="js">Precisa de JavaScript?</label>
+            <input type="checkbox" id="js">
+
+            <label for="layout">Precisa de layout?</label>
+            <div>
+                <input type="radio" id="layout_sim" name="layout">
+                <label for="layout_sim">Sim,preciso de layout</label>
+
+                <input type="radio" id="layout_nao" name="layout">
+                <label for="layout_nao">Não, já tenho</label>
+            </div>
+
+            <label for="prazo">Prazo</label>
+            <input type="range" id="prazo">
+
+            <output>R$0,00</output>
+        </form>
+    </section>
+
 </body>
 
 </html>
