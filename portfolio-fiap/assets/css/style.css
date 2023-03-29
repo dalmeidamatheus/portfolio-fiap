@@ -139,3 +139,39 @@ section{
     transition: opacity .10s ease-in-out, bottom .50s;
 }
 
+#secao_orcamento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(49, 49, 49);
+}
+
+#secao_orcamento form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #FFF;
+    position: relative;
+}
+
+#secao_orcamento output{
+    grid-column: 2;
+}
+
+#secao_orcamento h3{
+    position: absolute;
+    top: -15%;
+    background-color: rgb(49, 49, 49);
+    color: #FFF;
+}
+
+input[type=number]{
+    padding: .5rem;
+    background-color: #00ff2a;
+    color: var(--color-default);
+    border: none;
+}
