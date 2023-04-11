@@ -164,9 +164,10 @@ section{
 
 #secao_orcamento h3{
     position: absolute;
-    top: -15%;
+    top: -25%;
     background-color: rgb(49, 49, 49);
     color: #FFF;
+    font-size: 2.5rem;
 }
 
 input[type=number]{
