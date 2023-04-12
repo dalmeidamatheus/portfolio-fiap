@@ -23,6 +23,38 @@ body{
     font-family: var(--font-default);
 }
 
+.hamburguer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 3rem;
+    width: 3rem;
+    position: fixed;
+    right: 2rem;
+    top: 2rem;
+    z-index: 10;
+}
+
+.linha{
+    height: .5rem;
+    width: 100%;
+    background-color: #FFF;
+    box-shadow: 2px 2px 2px #000;
+}
+
+.menu{
+    height: 100vh;
+    width: 20rem;
+    position: fixed;
+    right: -20rem;
+    background-color: #FFF;
+    z-index: 9;
+}
+
+.show_menu{
+    right: 0;
+
+}
 
 header{
     display: flex;
