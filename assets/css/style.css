@@ -100,7 +100,7 @@ h3{
 }
 
 h1{
-    font-size: 6rem;
+    font-size: clamp(3rem, 5vw, 6rem);
     margin-bottom: 1rem;
 }
 
@@ -232,6 +232,14 @@ input[type=number]{
     border: none;
 }
 
-#prazo{
-    color: #000;
+@media (max-width: 900px) {
+    #secao-projetos ul{
+        flex-direction: column;
+    }
+    .large-only{
+        display: none;
+    }
+    #secao_orcamento form{
+        grid-template-columns: 1fr;
+    }
 }
