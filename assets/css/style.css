@@ -33,6 +33,7 @@ body{
     right: 2rem;
     top: 2rem;
     z-index: 10;
+    cursor: pointer;
 }
 
 .linha{
@@ -43,17 +44,39 @@ body{
 }
 
 .menu{
-    height: 100vh;
+    height: 30vh;
     width: 20rem;
     position: fixed;
     right: -20rem;
     background-color: #FFF;
     z-index: 9;
+    transition: right 1s;
+    font-size: 1.8rem;
+}
+.menu a{
+    text-decoration: none;
+    color: var(--color-secundary);
+}
+.menu a:hover{
+    color: #e7615d;
+}
+
+.menu ul{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    gap: 1.6rem;
 }
 
 .show_menu{
-    right: 0;
+    right: 1.89rem;
+    top: 2.1rem;
+}
 
+.botao_menu{
+    font-size: 200%;
 }
 
 header{
