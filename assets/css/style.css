@@ -44,30 +44,35 @@ body{
 }
 
 .menu{
-    height: 30vh;
+    height: 100vh;
     width: 20rem;
     position: fixed;
     right: -20rem;
-    background-color: #FFF;
+    background-color: #2F2BA6;
     z-index: 9;
     transition: right 1s;
     font-size: 1.8rem;
+    top: 2.1rem;
 }
 .menu a{
     text-decoration: none;
     color: var(--color-secundary);
 }
 .menu a:hover{
-    color: #e7615d;
+    color: #ffffff;
 }
 
 .menu ul{
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 2rem;
-    gap: 1.6rem;
+    gap: 5rem;
+}
+
+.menu li{
+    list-style: none;
 }
 
 .show_menu{
@@ -81,15 +86,21 @@ body{
 
 header{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 2rem;
     height: 100vh;
-    background-image: url('../images/nikita-kachanovsky-OVbeSXRk_9E-unsplash.jpg');
+    background-image: url(../images/banner-de-folha-monstera-tropical-neon.jpg);
     background-size: cover;
     color: var(--color-default);
     /*shorthand*/
-    padding: 14rem 8rem;
+    padding: 14rem 30rem;
+}
+.header-content {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
 }
 
 h1,
@@ -102,6 +113,7 @@ h3{
 h1{
     font-size: clamp(3rem, 5vw, 6rem);
     margin-bottom: 1rem;
+    /* width: 45rem; */
 }
 
 h2{
@@ -113,11 +125,12 @@ p{
 }
 
 span{
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 3vw, 4rem);
+    margin-bottom: 8rem;
 }
 
 .botao{
-    background: linear-gradient(90deg, rgba(2,0,36,1) 10%, rgb(0, 212, 255) 90%);
+    background: linear-gradient(156deg, rgb(0, 0, 3) 0%, rgb(104, 0, 189) 67%);
     border-radius: 12px;
     font-size: 3rem;
     color: #FFF;
@@ -136,7 +149,7 @@ section{
     border-radius: 50%;
     width: 300px;
     height: 300px;
-    animation: zoom 5s;
+    animation: zoom 5s ease-in-out;
 }
 
 @keyframes zoom{
@@ -148,23 +161,34 @@ section{
     }
 }
 
-#texto-apresentacao{
+#texto-noticias{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
 }
 
-#secao-projetos{
-    background-color: #212121;
-    color: var(--color-default);
+#secao-musicas{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #000007;
 }
 
-#secao-projetos ul{
+#secao-musicas ul{
     display: flex;
-    gap: 5rem;
     justify-content: space-around;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+#secao-musicas li{
     list-style: none;
+    position: relative;
+    cursor: pointer;
+}
+#secao-musicas h3{
+    font-size: 3rem;
 }
 
 .card{
@@ -172,34 +196,38 @@ section{
     cursor: pointer;
 }
 
-.card:hover .card-image{
-    opacity: .2;
-}
-
-.card:hover .card-info{
-    opacity: 1;
-    bottom: 20%;
-}
-
 .card-image img{
     height: 400px;
     width: 300px;
     border-radius: 10px;
+    object-fit: cover;
 }
 
 .card-info{
+    display: flex;
+    flex-direction: column;
     position: absolute;
     bottom: 0;
     opacity: 0;
-    transition: opacity .10s ease-in-out, bottom .50s;
+    transition: opacity .10s, bottom .5s;
+    padding: 2rem;
+    gap: 1rem;
+    color: #FFF;
+}
+#secao-musicas li:hover .card-info{
+    opacity: 1;
+    bottom: 20%;
 }
 
+#secao-musicas li:hover .card-image img{
+    opacity: .5;
+}
 #secao_orcamento{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: rgb(49, 49, 49);
+    background-color: #000007;
 }
 
 #secao_orcamento form{
@@ -233,7 +261,7 @@ input[type=number]{
 }
 
 @media (max-width: 900px) {
-    #secao-projetos ul{
+    #secao-musicas ul{
         flex-direction: column;
     }
     .large-only{
